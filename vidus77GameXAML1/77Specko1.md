@@ -120,3 +120,12 @@ Szeretnénk készíteni egy reakcióidő mérő játékot. A játék egymás ut�
   - Az alsó sor gombjai WrapPanelben középen lesznek 
   - - A gombok feliratai es nyilai is lesznek. 
     - A rossz valasz nyila jobboldalon lesz a felirathoz képest
+  - A kártyák kezeléséhez a FontAwesamot használjuk, amit először is a csomagkeresésen keresztül meg kell keresni
+    - megkerressük a *Manage Nuget Packages* a *Solution Exploreren* keresztül. a FontAwesome.WPF csomagját
+    - A *Nuget * végzi a verziófrissitést
+    - A *Nuget* a függőségeket is kezeli (Depences)
+     - *Package Menager Console* segítségével is lehetett volna telpíteni, de nem az a jobb megoldás
+     - Létrejön a projekktben a package.config állomány ami jelzi a program számáraa hasznáálhatóságot
+  - Ahhoz, hogy a konkr;t projektben is haszn'lhat= legyen a a MainWindow.xaml-ban be kell tenni a z 'llom'nyt 
+    - Ehhez az * xmlns:fa* sz-veget kezdj-k elbeg;pelni ;s ut'na ki kell v'lasztania az *="http://schemas.fontawesome.io/icons/"*  html-t 
+    - Ezutánn az *fa:* beütésével fel fogaj ajánlani, hogy fontot / ikont stb. használjunk a kódban

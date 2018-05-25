@@ -12,7 +12,7 @@ Vida Zoltán ( [Plesz Gábor, NetAcademia, 2018 tananyaga](https://github.com/Xa
 ### Visual Studio 2015
  - Community csomag
  - GitHub környezet
-   - A telepiteshez haszn'ltam a github normal windows aplikaciojat 
+   - A telepitéshez használtam a github normal windows aplikácioját 
  - Markdown [Extension](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor) felhasználásával 
    - Javasolt *.md formátum UTF8 
 

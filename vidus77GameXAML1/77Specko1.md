@@ -1,7 +1,7 @@
 ﻿﻿﻿# A Memória-kártyajáték specifikációja Nekifutás 05-24
 
 #### a File helye
- local C:\Users\...\Documents\GitHub\VZ-CSharp\vzSelfTutor
+ local C:\Users\...\Documents\Visual Studio 2015\Projects\vidus77Projects\vidus77Games
 
 
 ## Szerző helyesebben interpretáló

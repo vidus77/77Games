@@ -7,6 +7,56 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="281*"/>
+            <!-- 
+            todo: A gombok sort m;g auto magassagura kell majd allitani, amint meglesznek a gombok meretei
+            -->
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!--Top eredmenyek a nulladik oszlop-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical"
+                                    VerticalAlignment="Top">
+                <TextBlock Text="Top eredmények"
+                                       HorizontalAlignment="Center"
+                                       Margin="10">
+                </TextBlock>
+
+            </StackPanel>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!--A felso sort a feliratok  magassaga definialja-->
+                    <RowDefinition Height="237*"/>
+
+                </Grid.RowDefinitions>
+                
+                
+                <WrapPanel HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="8">
+                    <Label Content="Time"/>
+                    <Label Content="00:__"/>
+                    <Label Content="Pontszam"/>
+                    <Label Content="00__"/>
+                    <Label Content="Reakcio ido[ms]"/>
+                    <Label Content="00__"/>
+                    <Label Content="Atlag [ms]"/>
+                    <Label Content="00__"/>
+
+                </WrapPanel>
+
+
+            </Grid>
+            
+
+
+        </Grid>
     </Grid>
 </Window>

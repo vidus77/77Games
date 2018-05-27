@@ -30,20 +30,20 @@ Szeretnénk készíteni egy reakcióidő mérő játékot. A játék egymás ut�
  A _Felhasználó_ elindítja a játékot és és néhány játékot játszik, ezáltal képet nyer az aktuális reakció idejéről, koncentrációképességéről.
 
 ## A Játékmenet
-- Kezdéskor kapunk egy kártyát, 
-- Az, hogy jó-e a káártya lóre el kell döljön, nem a lapok számától füg
-  - (1.) A kártyának vagy jónak vagy nem jónak kell lennie nagyjából 50% eséllyel
-- majd a játék indításával a kártyánkat egy új váltja fel. A játék indítása, az Indítás gombbal megy.
-- A visszajelzésünkre (egyforma/nem egyforma) 
-- a játék jelzi egy zöld pipával/piros kereszttel, hogy a válaszunk helyes vagy helytelen.
-- a játékot billentyűzettel lehessen játszani
-- A válasznak megfelelő pontot számolja, 
-- méri az egyes reakcióidőt 
-- és az átlagos reakcióidőt is. 
-- A játék meghatározott ideig tart, amit a kezdéstől egy visszaszámláló óra jelez. 
-- A játék végén látjuk a pontszámunkat, 
-- és a top 5 pontszámot. 
-- Ha akarjuk újrakezdhetjük a játékot, vagy kiléphetünk.
+- [ ] Kezdéskor kapunk egy kártyát, 
+- [ ] Az, hogy jó-e a káártya lóre el kell döljön, nem a lapok számától füg
+  - [ ] (1.) A kártyának vagy jónak vagy nem jónak kell lennie nagyjából 50% eséllyel
+- [ ] majd a játék indításával a kártyánkat egy új váltja fel. A játék indítása, az Indítás gombbal megy.
+- [ ] A visszajelzésünkre (egyforma/nem egyforma) 
+- [ ] a játék jelzi egy zöld pipával/piros kereszttel, hogy a válaszunk helyes vagy helytelen.
+- [ ] a játékot billentyűzettel lehessen játszani
+- [ ] A válasznak megfelelő pontot számolja, 
+- [ ] méri az egyes reakcióidőt 
+- [ ] és az átlagos reakcióidőt is. 
+- [ ] A játék meghatározott ideig tart, amit a kezdéstől egy visszaszámláló óra jelez. 
+- [ ] A játék végén látjuk a pontszámunkat, 
+- [ ] és a top 5 pontszámot. 
+- [ ] Ha akarjuk újrakezdhetjük a játékot, vagy kiléphetünk.
 - 
 ## A markánsan különböző funkciók
  1. Tekintettel arra, hogy játék közben két gombot használunk, azok lenyomásának esélyeit ki kell egyenlítenünk.  
@@ -135,5 +135,11 @@ Feladatok
 - a gombokra kattintaskor történjen valami
 - legyen a kártyáknak egy hamaza, amiből kattintára egyet megjelenítünk véletlenszerűen
 - de előtte düntsük el 50/50 százalék esállyel új vagy régi kártya jöjjön
+- létrehozunk egy tömbüt ami a hlyes válasz valószínüségét határozza meg 0 / 1
+- mondjunk egy véletlen számot ami eldönti, új kártyát húzunk vagy az előzőt mutatjuk meg. 
+  - Magunknak a kártyáknak létrehozunk egy polcot (tömböt), amire kártyát tudunk tenni,
+    - a polc egyes elemeire kiteszünk kártyákat
+    - a polc egye elemei meg vanak számozva a kártyák száma-1 -ig,
+    - mondjunk egy véletlen számot, és az annyiadik kártyát levesszük a polcról
 
 - az *.xaml a vizualis tervező 

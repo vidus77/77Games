@@ -15,6 +15,7 @@
             -->
             <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -59,10 +60,12 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
-                    <fa:ImageAwesome Icon="CheckSquare"
-                                     Margin="15"/>
+                        <fa:ImageAwesome x:Name="CardIconResult" 
+                                        Icon="CheckSquare"
+                                        Margin="15"/>
                     <Grid Grid.Column="1">
-                        <fa:ImageAwesome Margin="20" Icon="Microchip" />
+                        <fa:ImageAwesome x:Name="CardQuestion" Margin="20" 
+                                         Icon="Microchip" />
 
                     </Grid>
 
@@ -74,7 +77,7 @@
                                        HorizontalAlignment="Center"
                                        Margin="8">
                             </TextBlock>
-                            <!-- todo: A dinamikus 'bra helye -->
+                            <!-- todo: A dinamikus ábra helye -->
                             <fa:ImageAwesome Icon="AlignCenter"
                                              Margin="25"/>
 

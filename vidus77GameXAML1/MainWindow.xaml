@@ -13,7 +13,7 @@
             <!-- 
             todo: A gombok sort m;g auto magassagura kell majd allitani, amint meglesznek a gombok meretei
             -->
-            <RowDefinition Height="38*"/>
+            <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -60,9 +60,9 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <fa:ImageAwesome Icon="CheckSquare"
-                                     Margin="10"/>
+                                     Margin="15"/>
                     <Grid Grid.Column="1">
-                        <fa:ImageAwesome Icon="Microchip" />
+                        <fa:ImageAwesome Margin="20" Icon="Microchip" />
 
                     </Grid>
 
@@ -79,8 +79,8 @@
                                              Margin="25"/>
 
                         </StackPanel>
-                        
-                        
+
+
                     </Grid>
 
 
@@ -90,6 +90,63 @@
 
             </Grid>
 
+
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--
+            Gombok
+            -->
+            <Grid Grid.Column="1">
+                <Button x:Name="ButtonStart"
+                        Margin="35,2" >
+                    <StackPanel Orientation="Horizontal" >
+                        <fa:FontAwesome Icon="ArrowUp" 
+                                        Margin="2"/>
+
+                        <TextBlock Margin="2" Text="Start"/>
+
+                    </StackPanel>
+                   
+                </Button>
+            </Grid>
+
+            <Grid >
+                <Button x:Name="ButtonYes" 
+                        Margin="15,5">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome Icon="ArrowLeft" 
+                                        VerticalAlignment="Bottom"
+                                        Margin="2"/>
+                        <TextBlock Text="Yes" Margin="2"/>
+
+                    </StackPanel>
+                </Button>
+
+
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Button x:Name="ButtonNo" 
+                        Margin="15,5" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome Icon="ArrowLeft" 
+                                        VerticalAlignment="Bottom"
+                                        Margin="2"/>
+                        <TextBlock Text="No" Margin="2"/>
+
+                    </StackPanel>
+                </Button>
+
+
+
+            </Grid>
 
 
         </Grid>

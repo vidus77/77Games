@@ -93,15 +93,18 @@
 
 
         </Grid>
+        
+        <!--
+        Gombok
+        -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
             <!--
-            Gombok
+            Start/Restart gombok középen
             -->
             <Grid Grid.Column="1">
                 <Button x:Name="ButtonStart"
@@ -116,10 +119,13 @@
                    
                 </Button>
             </Grid>
-
+            
+            <!--
+            A Jatszo gombok
+            -->
             <Grid >
                 <Button x:Name="ButtonYes" 
-                        Margin="15,5">
+                        Margin="15,5" Click="ButtonYes_Click">
                     <StackPanel Orientation="Horizontal">
                         <fa:FontAwesome Icon="ArrowLeft" 
                                         VerticalAlignment="Bottom"
@@ -129,12 +135,11 @@
                     </StackPanel>
                 </Button>
 
-
             </Grid>
 
             <Grid Grid.Column="2">
                 <Button x:Name="ButtonNo" 
-                        Margin="15,5" >
+                        Margin="15,5" Click="ButtonNo_Click" >
                     <StackPanel Orientation="Horizontal">
                         <fa:FontAwesome Icon="ArrowLeft" 
                                         VerticalAlignment="Bottom"
@@ -145,9 +150,7 @@
                 </Button>
 
 
-
             </Grid>
-
 
         </Grid>
     </Grid>

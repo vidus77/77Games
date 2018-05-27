@@ -129,3 +129,11 @@ Szeretnénk készíteni egy reakcióidő mérő játékot. A játék egymás ut�
   - Ahhoz, hogy a konkr;t projektben is haszn'lhat= legyen a a MainWindow.xaml-ban be kell tenni a z 'llom'nyt 
     - Ehhez az * xmlns:fa* sz-veget kezdj-k elbeg;pelni ;s ut'na ki kell v'lasztania az *="http://schemas.fontawesome.io/icons/"*  html-t 
     - Ezutánn az *fa:* beütésével fel fogaj ajánlani, hogy fontot / ikont stb. használjunk a kódban
+
+## Kódolási jegyzet
+Feladatok 
+- a gombokra kattintaskor történjen valami
+- legyen a kártyáknak egy hamaza, amiből kattintára egyet megjelenítünk véletlenszerűen
+- de előtte düntsük el 50/50 százalék esállyel új vagy régi kártya jöjjön
+
+- az *.xaml a vizualis tervező 

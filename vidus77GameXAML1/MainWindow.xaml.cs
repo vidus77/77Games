@@ -31,6 +31,13 @@ namespace vidus77GameXAML1
 
 			Debug.WriteLine("Yes gombot nyomtunk!");
 
+			UjKartyaHuzasa();
+
+			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
+		}
+
+		private void UjKartyaHuzasa()
+		{
 			// Szigurúan típusos nyelv a c# ezért megmondjuk, 
 			// hogy a polcunkoon mi lehet
 			// a polc programozói neve: "tömb"
@@ -40,7 +47,7 @@ namespace vidus77GameXAML1
 			//egy oéyan változót hozunk létre, amibne 6 db ilyen 
 			//ikon nevet tartalmazhat 
 			// attól változó a változó, hogy változhat az értéke 
-			var kartyapakli= new FontAwesome.WPF.FontAwesomeIcon[6];
+			var kartyapakli = new FontAwesome.WPF.FontAwesomeIcon[6];
 
 			// 0-tól az 5-ig 
 			kartyapakli[0] = FontAwesome.WPF.FontAwesomeIcon.Fax;
@@ -57,13 +64,14 @@ namespace vidus77GameXAML1
 
 			//Vesszük a kartyapaklinak megfelelő ikont és megjelenítjük
 			CardQuestion.Icon = kartyapakli[dobas];
-
-			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
 		}
 
 		private void ButtonNo_Click(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("Nem gombot nyomtunk!");
+			UjKartyaHuzasa();
+
+
 			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.CheckCircle;
 		}
 	}

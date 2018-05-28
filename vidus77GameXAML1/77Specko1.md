@@ -145,14 +145,17 @@ Feladatok
 
 - az *.xaml a vizualis tervező 
 
-### Feladatok
+## Feladatok
 - Induláskor cdak a Start gombra lehessen kattintani
 - A játék indulása után a Start gombra már ne lehessen kattintani
 
-## Programozás 
+### Programozás 
 -  [ ] Amikor elindul az alkalmazás
-  - [ ] le kell tiltani a *Yes/No* gombokat
-  - [ ] engedélyezni kell az indítást 
+  - [x] le kell tiltani a *Yes/No* gombokat
+  - [x] engedélyezni kell az indítást 
 - [ ] Amikor az indítást megnyomjuk
-  - [ ] le kell tiltani a *Start* gombot
-  - [ ] engedélyezni kell az *Yes/No* gombokat
+  - [x] le kell tiltani a *Start* gombot
+  - [x] engedélyezni kell az *Yes/No* gombokat
+
+## Feladatok
+- értékelni kel, hogy jó gombot nyomtunk-e meg, vagyis tudni kell, hogy a két kártya egyforma-e

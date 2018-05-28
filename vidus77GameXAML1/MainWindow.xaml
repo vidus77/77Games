@@ -111,7 +111,7 @@
             -->
             <Grid Grid.Column="1">
                 <Button x:Name="ButtonStart"
-                        Margin="35,2" >
+                        Margin="35,2" Click="ButtonStart_Click" >
                     <StackPanel Orientation="Horizontal" >
                         <fa:FontAwesome Icon="ArrowUp" 
                                         Margin="2"/>

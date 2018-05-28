@@ -21,9 +21,24 @@ namespace vidus77GameXAML1
     /// </summary>
     public partial class MainWindow : Window
     {
+		/// <summary>
+		/// AZ Ablak un. létrehozó függvénye az un. (Construktor)
+		/// az ablak képernyőre rajzolásakor lefut
+		/// </summary>
         public MainWindow()
         {
+			// Ez a sor elintézi az adminisztrációt
+			//a saját kódunkat utánna írjuk
             InitializeComponent();
+
+			//engedélyezzük a Start gombot
+			ButtonStart.IsEnabled = true;
+
+			//letiltjuk a Yes/No gombokat
+			ButtonYes.IsEnabled = false;
+			ButtonNo.IsEnabled = false;
+
+			UjKartyaHuzasa();
         }
 
 		private void ButtonYes_Click(object sender, RoutedEventArgs e)
@@ -36,6 +51,9 @@ namespace vidus77GameXAML1
 			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
 		}
 
+		/// <summary>
+		/// Ebbe a függvénybe szerveztük ki a káryahúzással kapcsolatos feladatokat
+		/// </summary>
 		private void UjKartyaHuzasa()
 		{
 			// Szigurúan típusos nyelv a c# ezért megmondjuk, 
@@ -73,6 +91,13 @@ namespace vidus77GameXAML1
 
 
 			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.CheckCircle;
+		}
+
+		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Start gombot nyomtuk meg!");
+			UjKartyaHuzasa();
+
 		}
 	}
 }

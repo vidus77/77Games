@@ -30,8 +30,9 @@ Szeretnénk készíteni egy reakcióidő mérő játékot. A játék egymás ut�
  A _Felhasználó_ elindítja a játékot és és néhány játékot játszik, ezáltal képet nyer az aktuális reakció idejéről, koncentrációképességéről.
 
 ## A Játékmenet
-- [ ] Kezdéskor kapunk egy kártyát, 
-- [ ] Az, hogy jó-e a káártya lóre el kell döljön, nem a lapok számától füg
+- [x] Kezdéskor kapunk egy kártyát, 
+- [ ] Amikor megnyomjuk a STart gombot megindul a játék folyamata
+- [ ] Az, hogy jó-e a káártya elóre el kell döljön, nem a lapok számától füg
   - [ ] (1.) A kártyának vagy jónak vagy nem jónak kell lennie nagyjából 50% eséllyel
 - [ ] majd a játék indításával a kártyánkat egy új váltja fel. A játék indítása, az Indítás gombbal megy.
 - [ ] A visszajelzésünkre (egyforma/nem egyforma) 
@@ -143,3 +144,15 @@ Feladatok
     - mondjunk egy véletlen számot, és az annyiadik kártyát levesszük a polcról
 
 - az *.xaml a vizualis tervező 
+
+### Feladatok
+- Induláskor cdak a Start gombra lehessen kattintani
+- A játék indulása után a Start gombra már ne lehessen kattintani
+
+## Programozás 
+-  [ ] Amikor elindul az alkalmazás
+  - [ ] le kell tiltani a *Yes/No* gombokat
+  - [ ] engedélyezni kell az indítást 
+- [ ] Amikor az indítást megnyomjuk
+  - [ ] le kell tiltani a *Start* gombot
+  - [ ] engedélyezni kell az *Yes/No* gombokat

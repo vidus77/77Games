@@ -150,12 +150,19 @@ Feladatok
 - A játék indulása után a Start gombra már ne lehessen kattintani
 
 ### Programozás 
--  [ ] Amikor elindul az alkalmazás
+- [X] Amikor elindul az alkalmazás
   - [x] le kell tiltani a *Yes/No* gombokat
   - [x] engedélyezni kell az indítást 
-- [ ] Amikor az indítást megnyomjuk
+- [X] Amikor az indítást megnyomjuk
   - [x] le kell tiltani a *Start* gombot
   - [x] engedélyezni kell az *Yes/No* gombokat
 
 ## Feladatok
 - értékelni kel, hogy jó gombot nyomtunk-e meg, vagyis tudni kell, hogy a két kártya egyforma-e
+
+### Programozás
+- [X] el kell tárolni az előző kártya értékét
+  - [x] ehhez nem volt elég lokális változót használni, hanem un. osztályszintű változó (mező/field) kellett
+- [x] el kellett dönteni, hogy az előző és a mostani kártya egyezik-e (egyezőség vizsgálat)
+  - [x] ha egyezik ezt írja ki a debugban
+  - [x] ha NEM egyezik ezt írja ki a debugban

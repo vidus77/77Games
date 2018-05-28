@@ -61,11 +61,13 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                         <fa:ImageAwesome x:Name="CardIconResult" 
-                                        Icon="CheckSquare"
+                                        Icon="question"
+                                         Foreground="LightGray"
                                         Margin="15"/>
                     <Grid Grid.Column="1">
                         <fa:ImageAwesome x:Name="CardQuestion" Margin="20" 
-                                         Icon="Microchip" />
+                                         Icon="question" 
+                                         Foreground="Gray"/>
 
                     </Grid>
 

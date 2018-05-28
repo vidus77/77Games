@@ -166,3 +166,9 @@ Feladatok
 - [x] el kellett dönteni, hogy az előző és a mostani kártya egyezik-e (egyezőség vizsgálat)
   - [x] ha egyezik ezt írja ki a debugban
   - [x] ha NEM egyezik ezt írja ki a debugban
+  - [ ] 
+ 
+## Feladatok
+- ikonnal jellezzük, hogy a válasz helyes-e
+- [x] legyenek más színei az ikonoknak
+- [x] mas-mas ikon legyen

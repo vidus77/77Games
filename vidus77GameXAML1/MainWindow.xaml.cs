@@ -58,15 +58,15 @@ namespace vidus77GameXAML1
 			//egy oéyan változót hozunk létre, amibne 6 db ilyen 
 			//ikon nevet tartalmazhat 
 			// attól változó a változó, hogy változhat az értéke 
-			var kartyapakli = new FontAwesome.WPF.FontAwesomeIcon[6];
+			var kartyapakli = new FontAwesomeIcon[6];
 
 			// 0-tól az 5-ig 
-			kartyapakli[0] = FontAwesome.WPF.FontAwesomeIcon.Fax;
-			kartyapakli[1] = FontAwesome.WPF.FontAwesomeIcon.Female;
-			kartyapakli[2] = FontAwesome.WPF.FontAwesomeIcon.Download;
-			kartyapakli[3] = FontAwesome.WPF.FontAwesomeIcon.Edge;
-			kartyapakli[4] = FontAwesome.WPF.FontAwesomeIcon.Hashtag;
-			kartyapakli[5] = FontAwesome.WPF.FontAwesomeIcon.Mars;
+			kartyapakli[0] = FontAwesomeIcon.Fax;
+			kartyapakli[1] = FontAwesomeIcon.Female;
+			kartyapakli[2] = FontAwesomeIcon.Download;
+			kartyapakli[3] = FontAwesomeIcon.Edge;
+			kartyapakli[4] = FontAwesomeIcon.Hashtag;
+			kartyapakli[5] = FontAwesomeIcon.Mars;
 
 			//létrehozunk egy dobókockát is ami alapokat húzza
 			var dobokocka = new Random();
@@ -100,6 +100,20 @@ namespace vidus77GameXAML1
 			ButtonNo.IsEnabled = true; 
 		}
 
+
+		private void AnswerBad()
+		{
+			Debug.WriteLine("a válasz HELYTELEN volt");
+			CardIconResult.Icon = FontAwesomeIcon.Times;
+			CardIconResult.Foreground = Brushes.Red;
+		}
+
+		private void AnswerGood()
+		{
+			Debug.WriteLine("a válasz HELYES volt");
+			CardIconResult.Icon = FontAwesomeIcon.CheckCircle;
+			CardIconResult.Foreground = Brushes.LightGreen;
+		}
 		private void ButtonYes_Click(object sender, RoutedEventArgs e)
 		{
 
@@ -116,20 +130,34 @@ namespace vidus77GameXAML1
 
 			if (elozokartya==CardQuestion.Icon) //a vizshógálat helye
 			{ // igaz esetén a kódblokk
-				Debug.WriteLine("a válasz HELYES volt");
+				AnswerGood();
 			}
 			else
 			{ //ha akifejezés nem igaz
-				Debug.WriteLine("a válasz HELYTELEN volt");
+				AnswerBad();
+
 			}
+
 			UjKartyaHuzasa();
 
-			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
+			CardIconResult.Icon = FontAwesomeIcon.Check;
 		}
 
 		private void ButtonNo_Click(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("Nem gombot nyomtunk!");
+
+			if (elozokartya != CardQuestion.Icon) //a vizshógálat helye
+			{ // igaz esetén a kódblokk
+			  //Debug.WriteLine("a válasz HELYES volt");
+				AnswerGood();
+			}
+			else
+			{ //ha akifejezés nem igaz
+			  //Debug.WriteLine("a válasz HELYTELEN volt");
+				AnswerBad();
+			}
+
 			UjKartyaHuzasa();
 
 

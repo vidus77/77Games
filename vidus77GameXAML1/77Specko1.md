@@ -172,3 +172,14 @@ Feladatok
 - ikonnal jellezzük, hogy a válasz helyes-e
 - [x] legyenek más színei az ikonoknak
 - [x] mas-mas ikon legyen
+
+## Feladatok
+- ki kell egyenlíteni a Yes és No gombok esélyeit
+- de csak akkor, ha már van mit ismételi
+
+### Programozás
+Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
+- [x]  Előzetesen meg kell győzödni, van-e mit ismételni
+  - [x] ha már van mit ismételni és az érme is úgy döntött akkor kell egy út, ami az előző kártyát ismétli (ilyenkor nem kell változtatni a lapon) csak kiírjuk debugban
+  - [x] kell egy út, ami a dobókocka eredményét mutatja meg.
+- [x] különbven a dobokocka által kiválasztoott lapot mutatjuk meg

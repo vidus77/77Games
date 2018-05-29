@@ -61,7 +61,7 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                         <fa:ImageAwesome x:Name="CardIconResult" 
-                                        Icon="question"
+                                        Icon="None"
                                          Foreground="LightGray"
                                         Margin="15"/>
                     <Grid Grid.Column="1">

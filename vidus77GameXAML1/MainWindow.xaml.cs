@@ -53,7 +53,6 @@ namespace vidus77GameXAML1
 			// hogy a polcunkoon mi lehet
 			// a polc programozói neve: "tömb"
 
-
 			//var a variable rövidítése aza változó
 			//egy oéyan változót hozunk létre, amibne 6 db ilyen 
 			//ikon nevet tartalmazhat 
@@ -81,39 +80,52 @@ namespace vidus77GameXAML1
 			//olyan változó kell, ami a más kódblokkaban is látszik
 			// var elozokartya = CardQuestion.Icon; sorból törölni kell a var változónak a
 			//meghatározását és Ctrl klikkel feladja a egy egy szinttel kintebb lévő véltozó létrehozását
+
+			Debug.WriteLine(CardQuestion.Icon);
 			elozokartya = CardQuestion.Icon;
 
-			//Vesszük a kartyapaklinak megfelelő ikont és megjelenítjük
-			CardQuestion.Icon = kartyapakli[dobas];
+			//VZ letrehozunk egy sorsolast ami pénzfeldobással eldönti, régi kártyát vagy a dobokocka eredményét mutatjuk fel 
+			//VZ Ez azt jelenti, hogy a dobokocka nem feltétleneül adja a CardQuestion Icoját.
+			var penzfeldobas = new Random();
+
+			//var ermeoldala = penzfeldobas.Next(0, 1); //valamiert mindig nullat ad
+			var ermeoldala = penzfeldobas.Next(0, 2);
+			Debug.Write("Érmeoldala: ");
+			
+			Debug.WriteLine(ermeoldala);
+
+
+			if ((CardQuestion.Icon != FontAwesomeIcon.Question) & (ermeoldala == 0))
+			{   //VZ ha lapunk már nem a kezdőikon ÉS
+				//VZ az érme oldala 0 
+				//VZ akkor marad az előző lap
+				Debug.WriteLine("Marad az előző lap");
+			}
+			else
+			{
+				//Vesszük a kartyapaklinak megfelelő ikont és megjelenítjük
+				Debug.WriteLine("Jön az újrasorsolt lap");
+				CardQuestion.Icon = kartyapakli[dobas];
+			}
+
+			
 		}
 
-		private void ButtonStart_Click(object sender, RoutedEventArgs e)
-		{
-			Debug.WriteLine("Start gombot nyomtuk meg!");
-			UjKartyaHuzasa();
-
-			//le kell tiltani a *Start* gombot
-			ButtonStart.IsEnabled = false;
-
-			//engedélyezni kell az* Yes/ No * gombokat
-			ButtonYes.IsEnabled = true;
-			ButtonNo.IsEnabled = true; 
-		}
-
-
+	
 		private void AnswerBad()
 		{
 			Debug.WriteLine("a válasz HELYTELEN volt");
-			CardIconResult.Icon = FontAwesomeIcon.Times;
+			CardIconResult.Icon = FontAwesomeIcon.ThumbsDown;
 			CardIconResult.Foreground = Brushes.Red;
 		}
 
 		private void AnswerGood()
 		{
 			Debug.WriteLine("a válasz HELYES volt");
-			CardIconResult.Icon = FontAwesomeIcon.CheckCircle;
+			CardIconResult.Icon = FontAwesomeIcon.ThumbsUp;
 			CardIconResult.Foreground = Brushes.LightGreen;
 		}
+
 		private void ButtonYes_Click(object sender, RoutedEventArgs e)
 		{
 
@@ -135,12 +147,23 @@ namespace vidus77GameXAML1
 			else
 			{ //ha akifejezés nem igaz
 				AnswerBad();
-
 			}
 
 			UjKartyaHuzasa();
 
-			CardIconResult.Icon = FontAwesomeIcon.Check;
+		}
+
+		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Start gombot nyomtuk meg!");
+			UjKartyaHuzasa();
+
+			//le kell tiltani a *Start* gombot
+			ButtonStart.IsEnabled = false;
+
+			//engedélyezni kell az* Yes/ No * gombokat
+			ButtonYes.IsEnabled = true;
+			ButtonNo.IsEnabled = true; 
 		}
 
 		private void ButtonNo_Click(object sender, RoutedEventArgs e)
@@ -159,9 +182,6 @@ namespace vidus77GameXAML1
 			}
 
 			UjKartyaHuzasa();
-
-
-			CardIconResult.Icon = FontAwesome.WPF.FontAwesomeIcon.CheckCircle;
 		}
 
 	}

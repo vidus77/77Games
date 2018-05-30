@@ -111,17 +111,7 @@ namespace vidus77GameXAML1
 
 			
 		}
-
 	
-		private void AnswerBad()
-		{
-			Debug.WriteLine("a válasz HELYTELEN volt");
-			CardIconResult.Icon = FontAwesomeIcon.ThumbsDown;
-			CardIconResult.Foreground = Brushes.Red;
-
-			VisszajelzeesEltuntetese();
-		}
-
 		private void VisszajelzeesEltuntetese()
 		{
 			//Animáció: egy érték változása az idő függvényben
@@ -148,11 +138,29 @@ namespace vidus77GameXAML1
 			VisszajelzeesEltuntetese();
 		}
 
-		private void ButtonYes_Click(object sender, RoutedEventArgs e)
+		private void AnswerBad()
 		{
+			Debug.WriteLine("a válasz HELYTELEN volt");
+			CardIconResult.Icon = FontAwesomeIcon.ThumbsDown;
+			CardIconResult.Foreground = Brushes.Red;
 
-			Debug.WriteLine("Yes gombot nyomtunk!");
+			VisszajelzeesEltuntetese();
+		}
 
+		private void StartGame()
+		{
+			UjKartyaHuzasa();
+
+			//le kell tiltani a *Start* gombot
+			ButtonStart.IsEnabled = false;
+
+			//engedélyezni kell az* Yes/ No * gombokat
+			ButtonYes.IsEnabled = true;
+			ButtonNo.IsEnabled = true;
+		}
+
+		private void YesAnswer()
+		{
 			//El kell döntenünk, hogy egyeznek-e a kártyák 
 			// FELTÉTELVIZSGÁLAT
 
@@ -162,7 +170,7 @@ namespace vidus77GameXAML1
 
 			//különben rossz
 
-			if (elozokartya==CardQuestion.Icon) //a vizshógálat helye
+			if (elozokartya == CardQuestion.Icon) //a vizshógálat helye
 			{ // igaz esetén a kódblokk
 				AnswerGood();
 			}
@@ -172,26 +180,10 @@ namespace vidus77GameXAML1
 			}
 
 			UjKartyaHuzasa();
-
 		}
 
-		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+		private void NoAnswer()
 		{
-			Debug.WriteLine("Start gombot nyomtuk meg!");
-			UjKartyaHuzasa();
-
-			//le kell tiltani a *Start* gombot
-			ButtonStart.IsEnabled = false;
-
-			//engedélyezni kell az* Yes/ No * gombokat
-			ButtonYes.IsEnabled = true;
-			ButtonNo.IsEnabled = true; 
-		}
-
-		private void ButtonNo_Click(object sender, RoutedEventArgs e)
-		{
-			Debug.WriteLine("Nem gombot nyomtunk!");
-
 			if (elozokartya != CardQuestion.Icon) //a vizshógálat helye
 			{ // igaz esetén a kódblokk
 			  //Debug.WriteLine("a válasz HELYES volt");
@@ -206,10 +198,47 @@ namespace vidus77GameXAML1
 			UjKartyaHuzasa();
 		}
 
+		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Start gombot nyomtuk meg!");
+			StartGame();
+		}
+
+		private void ButtonYes_Click(object sender, RoutedEventArgs e)
+		{
+
+			Debug.WriteLine("Yes gombot nyomtunk!");
+
+			YesAnswer();
+
+		}
+
+		private void ButtonNo_Click(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Nem gombot nyomtunk!");
+
+			NoAnswer();
+		}
+
+
 		private void Window_KeyDown(object sender, KeyEventArgs e)
 		{
 			Debug.WriteLine(e.Key);
 
+			if (e.Key==Key.Up)
+			{ // felfelé nyíl: Start gomb
+				StartGame();
+			}
+
+			if (e.Key==Key.Right)
+			{ // jobb nyíl: Nem gomb
+				NoAnswer();
+			}
+
+			if (e.Key==Key.Left)
+			{ // bal nyíl: igen gomb
+				YesAnswer();
+			}
 		}
 	}
 }

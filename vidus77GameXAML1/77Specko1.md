@@ -196,6 +196,6 @@ Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
   - igen és nem-et lehessen válaszolni billentyűvel (jobbra/balra nyíl)
 
 ### Programozás
-- el kell tudnunk kapni a billentyűleütést;
-- meg kell tudni mondani, hogy felfelé/balra/jobbra nyíl;
-- ennek megfelelően kel a játékot folytatni.
+- [x] el kell tudnunk kapni a billentyűleütést;
+- [x] meg kell tudni mondani, hogy felfelé/balra/jobbra nyíl;
+- [x] ennek megfelelően kel a játékot folytatni.

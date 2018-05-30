@@ -206,5 +206,10 @@ namespace vidus77GameXAML1
 			UjKartyaHuzasa();
 		}
 
+		private void Window_KeyDown(object sender, KeyEventArgs e)
+		{
+			Debug.WriteLine(e.Key);
+
+		}
 	}
 }

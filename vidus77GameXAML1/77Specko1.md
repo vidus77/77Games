@@ -189,3 +189,13 @@ Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
 
 ### Programozás
 -animációval átállítjuk a kártya *Opacity* értékét 100%-ról 0%-ra
+
+## Feladatok 
+- Billentyűvel is lehessen  játékot játszani. Ehhez:
+  - Játékot lehesssen indítani billentyűvel (felfelé nyíl)
+  - igen és nem-et lehessen válaszolni billentyűvel (jobbra/balra nyíl)
+
+### Programozás
+- el kell tudnunk kapni a billentyűleütést;
+- meg kell tudni mondani, hogy felfelé/balra/jobbra nyíl;
+- ennek megfelelően kel a játékot folytatni.

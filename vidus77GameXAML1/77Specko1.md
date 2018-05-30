@@ -200,4 +200,5 @@ Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
 - [x] meg kell tudni mondani, hogy felfelé/balra/jobbra nyíl;
 - [x] ennek megfelelően kel a játékot folytatni.
 
+## Feladatok
 

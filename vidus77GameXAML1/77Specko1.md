@@ -183,3 +183,9 @@ Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
   - [x] ha már van mit ismételni és az érme is úgy döntött akkor kell egy út, ami az előző kártyát ismétli (ilyenkor nem kell változtatni a lapon) csak kiírjuk debugban
   - [x] kell egy út, ami a dobókocka eredményét mutatja meg.
 - [x] különbven a dobokocka által kiválasztoott lapot mutatjuk meg
+
+## Feladatok
+- a válasz helyességének ikonja tűnjön el egy idő után
+
+### Programozás
+-animációval átállítjuk a kártya *Opacity* értékét 100%-ról 0%-ra

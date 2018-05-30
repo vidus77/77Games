@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FontAwesome.WPF;
+using System.Windows.Media.Animation;
 
 namespace vidus77GameXAML1
 {
@@ -117,6 +118,25 @@ namespace vidus77GameXAML1
 			Debug.WriteLine("a válasz HELYTELEN volt");
 			CardIconResult.Icon = FontAwesomeIcon.ThumbsDown;
 			CardIconResult.Foreground = Brushes.Red;
+
+			VisszajelzeesEltuntetese();
+		}
+
+		private void VisszajelzeesEltuntetese()
+		{
+			//Animáció: egy érték változása az idő függvényben
+			//egy szám folyamatosan változik 0-tól 1-ig
+			//az egyik tizedes türt neve: Double
+			//innen az animáció neve: DoubleAnimation
+			//a névteret Ctrl ponttal tültjük be
+
+			//időszakasz C# -ban:  TimeSpan
+			// Opacity 100% : 1
+			// Opacity 0% : 01
+
+			var animation = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(1000));
+
+			CardIconResult.BeginAnimation(OpacityProperty, animation);
 		}
 
 		private void AnswerGood()
@@ -124,6 +144,8 @@ namespace vidus77GameXAML1
 			Debug.WriteLine("a válasz HELYES volt");
 			CardIconResult.Icon = FontAwesomeIcon.ThumbsUp;
 			CardIconResult.Foreground = Brushes.LightGreen;
+
+			VisszajelzeesEltuntetese();
 		}
 
 		private void ButtonYes_Click(object sender, RoutedEventArgs e)

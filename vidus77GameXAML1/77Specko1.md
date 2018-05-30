@@ -31,11 +31,11 @@ Szeretnénk készíteni egy reakcióidő mérő játékot. A játék egymás ut�
 
 ## A Játékmenet
 - [x] Kezdéskor kapunk egy kártyát, 
-- [ ] Amikor megnyomjuk a STart gombot megindul a játék folyamata
-- [ ] Az, hogy jó-e a káártya elóre el kell döljön, nem a lapok számától füg
-  - [ ] (1.) A kártyának vagy jónak vagy nem jónak kell lennie nagyjából 50% eséllyel
+- [x] Amikor megnyomjuk a STart gombot megindul a játék folyamata
+- [x] Az, hogy jó-e a káártya elóre el kell döljön, nem a lapok számától füg
+  - [x] (1.) A kártyának vagy jónak vagy nem jónak kell lennie nagyjából 50% eséllyel
 - [ ] majd a játék indításával a kártyánkat egy új váltja fel. A játék indítása, az Indítás gombbal megy.
-- [ ] A visszajelzésünkre (egyforma/nem egyforma) 
+- [x] A visszajelzésünkre (egyforma/nem egyforma) 
 - [ ] a játék jelzi egy zöld pipával/piros kereszttel, hogy a válaszunk helyes vagy helytelen.
 - [ ] a játékot billentyűzettel lehessen játszani
 - [ ] A válasznak megfelelő pontot számolja, 
@@ -199,6 +199,9 @@ Pénzfeldobással eldöntjük hogy új lapot húzunk vagy sorsolunk
 - [x] el kell tudnunk kapni a billentyűleütést;
 - [x] meg kell tudni mondani, hogy felfelé/balra/jobbra nyíl;
 - [x] ennek megfelelően kel a játékot folytatni.
+<<<<<<< HEAD
 
 ## Feladatok
 
+=======
+>>>>>>> 598ec102f1aaf62eec1af088796ef621d3771a44
